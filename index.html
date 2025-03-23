@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Theater App</title>
+    <link rel="stylesheet" href="styles.css"><link>
+     
+</head>
+<body>
+    <h1>Book Your Ticket!</h1>
+        <div id="container">
+            <!--side bar containing the movie list-->
+            <aside id="movie-list"> 
+            <h2>Movies</h2>
+            <ul id="films">
+                <!---movies will be added dynamically-->
+            </ul>
+        </aside>
+        <main>
+            <img id="poster" src=""alt="movie Poster">
+        </main>
+        <!--- display movie details at the top right-->
+        <section id="movie-details">
+            <h2 id="title">Movie Title</h2>
+            <p<strong>Runtime:</strong> <span id="Runtime"> min</span></p>
+            <p><strong>Showtime:</strong> <span id="showtime"></span></p>
+            <p><strong>Description:</strong> <span id="description"></span></p>
+            <p><strong>Available Tickets:</strong> <span id="available-tickets"></span></p>
+            <button id="buy-ticket">Buy Ticket</button>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

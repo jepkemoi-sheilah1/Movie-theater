@@ -1,0 +1,74 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body*/
+body{
+    border:10px,solid black;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8
+    
+       
+   
+}
+/* Main Layout */
+#container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Movie List */
+#movie-list {
+    width: 30%;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+#films {
+    list-style: none;
+    padding: 0;
+}
+
+#films li {
+    padding: 10px;
+    cursor: pointer;
+    background: white;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+}
+
+#films li:hover {
+    background: #ddd;
+}
+
+/* Movie Details */
+#movie-details {
+    width: 70%;
+    padding: 20px;
+}
+
+#poster {
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    background: orange;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkorange;
+}
