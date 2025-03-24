@@ -3,72 +3,109 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/*body*/
-body{
-    border:10px,solid black;
-    margin-top: 10px;
-    font-family: Arial, sans-serif;
-    margin: auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f8f8f8
-    
-       
-   
+/* Body Background */
+body {
+    background-color: #1e3a5f; /* Dark Blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
-/* Main Layout */
+
+/* Main Heading */
+h1 {
+    color: #f4b400; /* Gold */
+    margin-bottom: 20px;
+}
+
+/* Container */
 #container {
     display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
     padding: 20px;
+}
+
+/* Sidebar */
+aside#movie-list {
+    width: 30%;
+    background: #263f63; /* Darker Blue */
+    padding: 20px;
+    border-radius: 8px;
 }
 
 /* Movie List */
-#movie-list {
-    width: 30%;
-    background: #f4f4f4;
-    padding: 20px;
-}
-
 #films {
     list-style: none;
-    padding: 0;
+    padding: 10px;
 }
 
 #films li {
+    background: #f4b400; /* Gold */
+    color: black;
     padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
     cursor: pointer;
-    background: white;
-    margin-bottom: 5px;
-    border: 1px solid #ddd;
+    text-align: left;
+    transition: 0.3s;
 }
 
 #films li:hover {
-    background: #ddd;
+    background: #d99a00;
 }
 
-/* Movie Details */
-#movie-details {
-    width: 70%;
-    padding: 20px;
+/* Movie Poster */
+main {
+    flex: 1;
 }
 
 #poster {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-button {
-    background: orange;
-    color: white;
-    padding: 10px;
+/* Movie Details */
+#movie-details {
+    width: 30%;
+    background: #263f63;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#movie-details h2 {
+    color: #f4b400;
+}
+
+#movie-details p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Buy Ticket Button */
+#buy-ticket {
+    background: #f4b400;
+    color: black;
+    padding: 10px 15px;
+    font-size: 1.1em;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-button:hover {
-    background: darkorange;
+#buy-ticket:hover {
+    background: #d99a00;
+}
+
+/* Sold Out Styling */
+.sold-out {
+    background: gray !important;
+    color: white !important;
+    cursor: not-allowed;
 }
