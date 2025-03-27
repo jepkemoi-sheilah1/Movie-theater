@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function displayMovieDetails(movie) {
         document.getElementById("poster").src = movie.poster;
         document.getElementById("title").textContent = movie.title;
-        document.getElementById("runtime").textContent = `${movie.runtime} min`; // Fixed ID
+        document.getElementById("runtime").textContent = `${movie.runtime} min`; 
         document.getElementById("showtime").textContent = movie.showtime;
         document.getElementById("description").textContent = movie.description;
 
@@ -151,3 +151,13 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(error => {
     console.error("Error creating ticket:", error);
 });
+fetch("http://localhost:3000/films")
+  .then((response) => response.json())
+  .then((movies) => {
+    if (movies.length > 0) {
+      displayMovie(movies[0]); // Display the first available movie 
+    } else {
+      console.warn("No movies found in the database.");
+    }
+  })
+  .catch((error) => console.error("Error fetching movies:", error));
